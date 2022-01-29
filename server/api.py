@@ -34,8 +34,7 @@ def buy_or_sell():
     user.shares -= request_data['amount']
     db.session.commit()
     return {200: "OK"}
-    # update = db.session.update(User).where(User.name == 'init_user').values(shares = User.shares - request_data['amount'])
-    # db.session.execute(update)
+   
 
 if __name__ == '__main__':
     app.run(debug=True)
